@@ -1,6 +1,11 @@
 // lib/auth.ts
 import { auth } from "./firebase";
-import { createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  updateProfile,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 
 // REGISTRO
 export const registrarUsuario = async (

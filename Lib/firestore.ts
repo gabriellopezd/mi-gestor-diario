@@ -1,3 +1,9 @@
+interface Tarea {
+  id: string;
+  text: string;
+  done: boolean;
+  categoria: string;
+}
 import { db } from "./firebase";
 import { app } from "./firebase";
 import {

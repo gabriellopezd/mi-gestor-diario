@@ -1,4 +1,4 @@
-// firebase.ts
+// Lib/firebase.ts
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
@@ -14,4 +14,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export { app, db }; // ✅ ahora exportamos ambos
+export { app, db }; // ✅ ESTA LÍNEA ES OBLIGATORIA

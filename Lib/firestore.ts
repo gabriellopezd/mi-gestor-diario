@@ -1,5 +1,5 @@
 import { db } from "./firebase";
-import type { Tarea } from "../types"; // ✅ CORRECTO
+import type { Tarea } from "../types.ts";
 import {
   collection,
   addDoc,

@@ -1,5 +1,5 @@
 import { db } from "./firebase";
-import type { Tarea } from "../types"; // ✅ Mantén esto igual, es correcto si lib está en minúsculas//
+import type { Tarea } from "../types";
 import {
   collection,
   addDoc,

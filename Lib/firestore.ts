@@ -1,11 +1,5 @@
-interface Tarea {
-  id: string;
-  text: string;
-  done: boolean;
-  categoria: string;
-}
 import { db } from "./firebase";
-import { app } from "./firebase";
+import { Tarea } from "./types"; // ✅ Importamos el tipo
 import {
   collection,
   addDoc,
@@ -15,10 +9,8 @@ import {
   deleteDoc,
   doc,
   updateDoc,
- setDoc,
   orderBy,
   getFirestore,
-  Timestamp
 } from "firebase/firestore";
 
 // Referencia a la colección

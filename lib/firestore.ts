@@ -1,5 +1,5 @@
 import { db } from "./firebase";
-import type { Tarea } from "../types";
+import type { Tarea } from "@/types";
 import {
   collection,
   addDoc,

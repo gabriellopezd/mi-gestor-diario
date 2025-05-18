@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/lib/hooks/useAuth";
-import { cerrarSesion } from "@/lib/firebase";
+import { cerrarSesion } from "@/lib/auth"; // ✅ Correcto;
 import { SectionedTaskList } from "@/components/SectionedTaskList";
 import { motion } from "framer-motion";
 import Image from "next/image";

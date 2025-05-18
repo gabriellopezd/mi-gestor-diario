@@ -1,16 +1,17 @@
-// lib/firebase.ts
+// firebase.ts
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8nD-DoLkzkkm6CIZfKCUyIUCyNdSjA", // usa tus datos reales
-  authDomain: "gestor-diario-a232e.firebaseapp.com",
-  projectId: "gestor-diario-a232e",
-  storageBucket: "gestor-diario-a232e.appspot.com",
-  messagingSenderId: "179325189345",
-  appId: "1:179325189345:web:4a954d8831c6bc516ee6a0",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
 };
 
-// Inicializa Firebase solo una vez
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+const db = getFirestore(app);
+
+export { app, db }; // ✅ ahora exportamos ambos

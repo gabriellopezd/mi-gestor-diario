@@ -14,8 +14,17 @@ export const registrarUsuario = async (
   contraseña: string
 ) => {
   const credenciales = await createUserWithEmailAndPassword(auth, correo, contraseña);
+
+  // Guardamos el nombre en el perfil
   await updateProfile(credenciales.user, { displayName: nombre });
-  return credenciales.user;
+
+  // 🔄 Recargamos el perfil del usuario
+  await credenciales.user.reload();
+
+  // ✅ Obtenemos el usuario actualizado
+  const userActualizado = auth.currentUser;
+
+  return userActualizado!;
 };
 
 // LOGIN
